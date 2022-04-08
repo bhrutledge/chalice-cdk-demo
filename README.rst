@@ -11,21 +11,17 @@ For more information, see the `Deploying with the AWS CDK
 Quickstart
 ----------
 
-First, you'll need to install the AWS CDK if you haven't already.
-The CDK requires Node.js and npm to run.
-See the `Getting started with the AWS CDK
-<https://docs.aws.amazon.com/cdk/latest/guide/getting_started.html>`__ for
-more details.
+First, you'll need to install the requirements for the project.
 
 ::
 
-  $ npm install -g aws-cdk
+  $ python3 -m venv venv
 
-Next you'll need to install the requirements for the project.
+  $ source venv/bin/activate
 
-::
+  $ python3 -m pip install -r requirements.txt
 
-  $ pip install -r requirements.txt
+  $ npm --prefix infrastructure install
 
 There's also separate requirements files in the ``infrastructure``
 and ``runtime`` directories if you'd prefer to have separate virtual
@@ -37,13 +33,13 @@ your environment.
 
 ::
 
-  $ cdk bootstrap
+  $ npx cdk bootstrap
 
 Then you can deploy your application using the CDK.
 
 ::
 
-  $ cdk deploy
+  $ npx cdk deploy
 
 
 Project layout
